@@ -7,5 +7,17 @@ function adicionarAmigo() {
    jogadores.push(nome);
    //Verificar os nomes no console
    console.log(jogadores);
-
+   //limpar o campo de entrada
+   nome = document.querySelector("input");
+    nome.value = "";
+}
+//Adiciona uma função para que o resultado seja totalmente aleatório
+function amigoAleatorio(totalAmigos) {
+  return Math.floor(Math.random() * totalAmigos);
+}
+//Função que sorteia o amigo após o clique no botão
+function sortearAmigo() {
+    let resultado = amigoAleatorio(jogadores.length);
+    alert(jogadores[resultado]); // um alerta inicial para teste
+    
 }
