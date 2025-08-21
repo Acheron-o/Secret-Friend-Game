@@ -32,7 +32,7 @@ Após adicionar os nomes, será possível sortear um **amigo secreto** de forma 
    ```bash
    git clone https://github.com/Acheron-o/challenge-secret-friend-pt.git
 2.**Entre na pasta do projeto**
-```` ```bash cd secret-friend-game ````
+```` cd secret-friend-game ````
 
 3.**Abra o arquivo index.html diretamente no navegador.**
 ´´´´
