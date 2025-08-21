@@ -24,3 +24,14 @@ Após adicionar os nomes, será possível sortear um **amigo secreto** de forma 
 - **CSS3** → estilização da interface.  
 - **JavaScript (DOM e lógica)** → manipulação da lista, validações e sorteio.  
 
+---
+
+## 🚀 Como Rodar Localmente
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/Acheron-o/challenge-secret-friend-pt.git
+2.**Entre na pasta do projeto**:
+ ```bash
+cd secret-friend-game
+
