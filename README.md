@@ -40,7 +40,7 @@ ou
 Use a extensão Live Server no VS Code para rodar o projeto.**
 
 
-##🎲 Algoritmo Fisher–Yates (Breve Explicação)
+## 🎲 Algoritmo Fisher–Yates (Breve Explicação)
 
 O sorteio de nomes neste projeto utiliza o algoritmo Fisher–Yates shuffle.
 Esse algoritmo é usado para embaralhar arrays de forma justa, garantindo que cada elemento tenha a mesma probabilidade de aparecer em qualquer posição.
