@@ -1,7 +1,5 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 //----------------------------------------------------------------------------------------------------------------------------------------------------------
-//VALIDAÇÕES A SEREM FEITAS :
-//Garantir que seja adicionado ao menos 1 caractere, caso seja adicionado um numero ou um texto em branco, um aviso será feito
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------
 //Crie um array para armazenar os nomes
