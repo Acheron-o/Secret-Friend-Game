@@ -1,3 +1,0 @@
-VALIDAÇÕES A SEREM FEITAS :
-Garantir que seja adicionado ao menos 1 caractere, caso seja adicionado um numero ou um texto em branco, um aviso será feito []
-Um botão que reinicie o jogo, limpando a lista e revertendo a tela para sua aparência inicial
