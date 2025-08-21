@@ -1,71 +1,74 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-//----------------------------------------------------------------------------------------------------------------------------------------------------------
+// O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação.
+// Aqui você deve desenvolver a lógica para resolver o problema do Amigo Secreto.
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------------
-//Crie um array para armazenar os nomes
+// Cria um array para armazenar os nomes
 let jogadores = [];
-//Implementa uma função para agregar amigos
+
+// Função para adicionar amigos
 function adicionarAmigo() {
     const input = document.getElementById('amigo');
     let nome = input.value.trim();
-    //Verifica se o campo de entrada está vazio
-    if (nome === "") { 
-               exibirMensagemNaTela("h2", "Por favor, digite um nome válido!");
 
+    // Verifica se o campo está vazio
+    if (nome === "") { 
+        exibirMensagemNaTela("h2", "Por favor, digite um nome válido!");
         return;
     } 
-     exibirMensagemNaTela("h2", "Digite o nome dos seus amigos");
 
-   jogadores.push(nome);
+    exibirMensagemNaTela("h2", "Digite o nome dos seus amigos");
+
+    jogadores.push(nome);
    
-   //limpar o campo de entrada
-   nome = document.querySelector("input");
-    nome.value = "";
-   // Atualiza a lista de amigos na tela
+    // Limpa o campo de entrada
+    input.value = "";
+
+    // Atualiza a lista na tela
     const lista = document.getElementById('listaAmigos');
-    lista.innerHTML = ""; // Limpa a lista antes de atualizar
+    lista.innerHTML = ""; // Limpa antes de atualizar
     jogadores.forEach(amigo => {
         const li = document.createElement('li');
         li.textContent = amigo;
         lista.appendChild(li);
-
     });
-resultado.innerHTML = "";}
 
-//Adiciona uma função para que o resultado seja totalmente aleatório
-function amigoAleatorio(totalAmigos) {
-  return Math.floor(Math.random() * totalAmigos);
+    document.getElementById("resultado").innerHTML = "";
 }
-//Função que sorteia o amigo após o clique no botão
+
+// Função de embaralhamento (Fisher–Yates)
+function embaralhar(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // troca de posições
+    }
+    return array;
+}
+
+// Função para sortear o amigo secreto
 function sortearAmigo() {
-    if (jogadores.length < 2){
-       
+    if (jogadores.length < 2) {
         exibirMensagemNaTela("h2", "É necessário pelo menos 2 amigos para realizar o sorteio.");
         return;
-        
     }
-   else {
-        let resultadoSorteio = amigoAleatorio(jogadores.length);
-    const resultados = jogadores[resultadoSorteio];
+
+    // Embaralha o array para garantir igualdade de chances
+    let embaralhados = embaralhar([...jogadores]); // copia e embaralha
+    const amigoSorteado = embaralhados[0]; // pega o primeiro após embaralhar
 
     // Mostra o resultado na tela
     const resultado = document.getElementById('resultado');
-    resultado.innerHTML = ""; // Limpa resultados anteriores
+    resultado.innerHTML = "";
     const li = document.createElement('li');
-    li.textContent = resultados
+    li.textContent = amigoSorteado;
     resultado.appendChild(li);
 
-    // Limpa lista de amigos
+    // Limpa a lista de amigos
     jogadores = [];
     document.getElementById('listaAmigos').innerHTML = "";
 
-     exibirMensagemNaTela("h2", "Sorteio realizado com sucesso! Adicione mais um novo amigo para um novo sorteio.");    
-        }
-    
-    
+    exibirMensagemNaTela("h2", "Sorteio realizado com sucesso! Adicione novos amigos para um novo sorteio.");
 }
 
-
-function exibirMensagemNaTela(tag , mensagem) {
+// Função para exibir mensagens dinamicamente
+function exibirMensagemNaTela(tag, mensagem) {
     document.querySelector(tag).innerHTML = mensagem;
 }
