@@ -31,11 +31,15 @@ Após adicionar os nomes, será possível sortear um **amigo secreto** de forma 
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/Acheron-o/challenge-secret-friend-pt.git
-2.**Entre na pasta do projeto**:
+2.**Entre na pasta do projeto**
+```` ```bash cd secret-friend-game ````
+
 3.**Abra o arquivo index.html diretamente no navegador.**
+´´´´
 Clique duas vezes no arquivo
 ou
 Use a extensão Live Server no VS Code para rodar o projeto.
+´´´´
 
 ##🎲 Algoritmo Fisher–Yates (Breve Explicação)
 
