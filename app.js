@@ -10,19 +10,17 @@ function adicionarAmigo() {
     let nome = input.value.trim();
     //Verifica se o campo de entrada está vazio
     if (nome === "") { 
-               document.querySelector("h2").innerHTML = "Digite um nome válido"
+               exibirMensagemNaTela("h2", "Por favor, digite um nome válido!");
 
         return;
     } 
-        document.querySelector("h2").innerHTML = "Digite o nome dos seus amigos";
+     exibirMensagemNaTela("h2", "Digite o nome dos seus amigos");
 
    jogadores.push(nome);
-   //Verificar os nomes no console
-   console.log(jogadores);
+   
    //limpar o campo de entrada
    nome = document.querySelector("input");
     nome.value = "";
-   //Colocara os nomes na tela
    // Atualiza a lista de amigos na tela
     const lista = document.getElementById('listaAmigos');
     lista.innerHTML = ""; // Limpa a lista antes de atualizar
@@ -42,7 +40,8 @@ function amigoAleatorio(totalAmigos) {
 function sortearAmigo() {
     if (jogadores.length < 2){
        
-        document.querySelector("h2").innerHTML = "É necessário ao menos 2 participantes"
+        exibirMensagemNaTela("h2", "É necessário pelo menos 2 amigos para realizar o sorteio.");
+        return;
         
     }
    else {
@@ -60,10 +59,13 @@ function sortearAmigo() {
     jogadores = [];
     document.getElementById('listaAmigos').innerHTML = "";
 
-     document.querySelector("h2").innerHTML = "Sorteio realizado com sucesso!";    
+     exibirMensagemNaTela("h2", "Sorteio realizado com sucesso! Adicione mais um novo amigo para um novo sorteio.");    
         }
     
     
 }
 
 
+function exibirMensagemNaTela(tag , mensagem) {
+    document.querySelector(tag).innerHTML = mensagem;
+}
