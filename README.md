@@ -31,7 +31,7 @@ Após adicionar os nomes, será possível sortear um **amigo secreto** de forma 
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/Acheron-o/challenge-secret-friend-pt.git
-2.**Entre na pasta do projeto**
+2.**Entre na pasta do projeto**:
 ```` cd secret-friend-game ````
 
 3.**Abra o arquivo index.html diretamente no navegador.**
