@@ -4,16 +4,9 @@
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
 The **Secret Friend Game** is a simple and fun web application for drawing secret friends quickly and fairly. The main goal is to strengthen skills in programming logic and DOM manipulation.
+<img src="./readme-images/main-gif,gif" alt="Main theme gif" width="100px" height="200px"
 
----
-## 🚀 Live Demo
 
-Acess the application:
-
-* **Vercel:** [https://challenge-secret-friend-pt.vercel.app/](https://challenge-secret-friend-pt.vercel.app/)
-* **GitHub Pages:** [https://acheron-o.github.io/Secret-Friend-Game/](https://acheron-o.github.io/Secret-Friend-Game/)
-
----
 
 ## 🚀 Technologies
 
@@ -32,7 +25,14 @@ Acess the application:
 - **Sound:** A button to enable or disable the application's sounds.
 
 ---
+## 🚀 Live Demo
 
+Acess the application:
+
+* **Vercel:** [https://challenge-secret-friend-pt.vercel.app/](https://challenge-secret-friend-pt.vercel.app/)
+* **GitHub Pages:** [https://acheron-o.github.io/Secret-Friend-Game/](https://acheron-o.github.io/Secret-Friend-Game/)
+
+---
 ## ⚙️ How to Run Locally
 
 1.  **Clone the repository:**
