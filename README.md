@@ -36,3 +36,24 @@ Acess the application:
 ![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/sound-gif.gif)
 
 ---
+
+## ⚙️ How to Run Locally
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Acheron-o/Secret-Friend-Game.git
+    ```
+2.  **Enter the project folder:**
+    ```bash
+    cd Secret-Friend-Game
+    ```
+3.  **Open the `index.html` file directly in your browser.**
+    
+    * **Option 1:** Double-click the file.
+    * **Option 2:** Use the **Live Server** extension in VS Code to run it.
+
+---
+
+## 👨‍💻 Developed by
+
+* **[Caio-](https://github.com/Acheron-o)**
