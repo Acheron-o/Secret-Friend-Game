@@ -8,7 +8,7 @@ The **Secret Friend Game** is a simple and fun web application for drawing secre
 ---
 ## 🚀 Live Demo
 
-Acesse a aplicação ao vivo:
+Acess the application:
 
 * **Vercel:** [https://challenge-secret-friend-pt.vercel.app/](https://challenge-secret-friend-pt.vercel.app/)
 * **GitHub Pages:** [https://acheron-o.github.io/Secret-Friend-Game/](https://acheron-o.github.io/Secret-Friend-Game/)
