@@ -33,14 +33,6 @@ Acess the application:
 
 ---
 
-## 🎬 Demo
-
-To better understand how the game works, watch this quick video or see the images below:
-
-
-
----
-
 ## ⚙️ How to Run Locally
 
 1.  **Clone the repository:**
