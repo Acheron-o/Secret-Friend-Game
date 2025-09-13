@@ -1,3 +1,7 @@
+// The main goal of this challenge is to strengthen your programming logic skills.
+// Here you should develop the logic to solve the Secret Friend problem.
+
+
 // ===================================
 // 🎁 Secret Friend Game - Main Logic
 // ===================================
