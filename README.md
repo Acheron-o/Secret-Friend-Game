@@ -28,7 +28,7 @@ Acess the application:
 ---
 
 ## 🌟 Features
-- **Complete guide:** A useful and easy guide.
+- **Complete guide:** An useful and easy guide.
 ![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/guide-image.png)
 - **Language Support:** Change the interface language with a single click.
 ![Translation feature](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/translation-gif.gif)
