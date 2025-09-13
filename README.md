@@ -3,7 +3,7 @@
 ![Vercel](https://vercel.com/button)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
-![Main Screenshot do Secret Friend Game](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/assets/main-screenshot.png)
+![Main Screenshot do Secret Friend Game](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/main-gif.gif)
 
 The **Secret Friend Game** is a simple and fun web application for drawing secret friends quickly and fairly. The main goal is to strengthen skills in programming logic and DOM manipulation.
 
