@@ -3,10 +3,14 @@
 ![Vercel](https://vercel.com/button)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
+![Main Screenshot do Secret Friend Game](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/main-gif.gif)
+
 The **Secret Friend Game** is a simple and fun web application for drawing secret friends quickly and fairly. The main goal is to strengthen skills in programming logic and DOM manipulation.
 
 ---
 ## 🚀 Live Demo
+
+![Demo GIF do sorteio](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/assets/sorteio.gif)
 
 Acess the application:
 
@@ -24,12 +28,12 @@ Acess the application:
 ---
 
 ## 🌟 Features
-
-- **Add Names:** Insert your friends' names into a list.
-- **Fair Draw:** A secret friend is drawn completely at random.
-- **Automatic Cleanup:** The list is automatically cleared after the draw, ready for a new round.
+- **Complete guide:** An useful and easy guide.
+![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/guide-image.png)
 - **Language Support:** Change the interface language with a single click.
+![Translation feature](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/translation-gif.gif)
 - **Sound:** A button to enable or disable the application's sounds.
+![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/sound-gif.gif)
 
 ---
 
@@ -53,4 +57,3 @@ Acess the application:
 ## 👨‍💻 Developed by
 
 * **[Caio-](https://github.com/Acheron-o)**
- 
