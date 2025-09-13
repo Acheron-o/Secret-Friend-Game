@@ -26,9 +26,7 @@ The **Secret Friend Game** is a simple and fun web application for drawing secre
 
 To better understand how the game works, watch this quick video or see the images below:
 
-**(Here you can insert links to videos or GIFs)**
 
-![Image showing the game interface](https://via.placeholder.com/600x300.png?text=Game+Screenshot)
 
 ---
 
