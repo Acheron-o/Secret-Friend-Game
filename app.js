@@ -240,6 +240,7 @@ function loadLanguage(lang) {
 
 // Apply translations to UI
 function applyTranslations() {
+    // Main UI elements
     document.querySelector('.main-title').textContent = translations.title;
     document.querySelector('.section-title').textContent = translations.enter_names;
     document.querySelector('.button-add').textContent = translations.add;
@@ -249,6 +250,19 @@ function applyTranslations() {
     if (nameInput && translations["type_name_placeholder"]) {
         nameInput.placeholder = translations["type_name_placeholder"];
     }
+
+    // Instructions modal elements
+    const instructionsModal = document.getElementById('instructions-modal');
+    instructionsModal.querySelector('h2').textContent = translations.instructions_title || "How to Play";
+    const instructionsText = document.getElementById('instructions-text');
+    instructionsText.innerHTML = `
+        <p>${translations.instructions_welcome || "Welcome to Secret Friend!"}</p>
+        <p>1. ${translations.instructions_step1 || "Enter the names of all participants."}</p>
+        <p>2. ${translations.instructions_step2 || "Click 'Draw Friend' to randomly select a secret friend."}</p>
+        <p>3. ${translations.instructions_step3 || "Enjoy the game and have fun!"}</p>
+        <p>${translations.instructions_language || "You can change the language using the button above."}</p>
+    `;
+    document.getElementById('close-instructions').textContent = translations.instructions_ok || "OK";
 }
 
 // Display translated or fallback message
