@@ -36,6 +36,9 @@
             <button id="theme-btn" aria-label="Toggle main theme" class="header-btn theme-btn">
                 <img src="./assets/icons/music-theme-off.png" alt="Theme music icon" id="theme-icon" width="32" height="32">
             </button>
+            <!-- Help button (next to language button) -->
+            <button id="help-btn" aria-label="How to play" class="header-btn help-btn">
+                <img src="./assets/icons/guide-icon.png" alt="Help icon" width="32" height="32">
         </header>
 
         <!-- Input section for adding friends -->
@@ -69,6 +72,26 @@
             <div class="language-options"></div>
         </div>
     </div>
+    <div id="instructions-modal" class="language-modal hidden" role="dialog" aria-modal="true">
+    <div class="language-modal-content">
+        <h2 id="instructions-modal-title">How to Play</h2>
+        <div id="instructions-text">
+            <!-- Instructions text initialize in English-->
+            <p>
+                Welcome to Secret Friend!<br><br>
+                1. Enter the names of all participants.<br>
+                2. Click "Draw Friend" to randomly select a secret friend.<br>
+                3. Enjoy the game and have fun!<br><br>
+                You can change the language using the button above.
+            </p>
+        </div>
+        <button id="close-instructions" style="margin-top:24px;">OK</button>
+        
+        <button id="lang-btn-instructions" aria-label="Change language" class="header-btn lang-btn">
+            <img src="./assets/icons/translation-icon.png" alt="Language icon" width="32" height="32">
+        </button>
+    </div>
+</div>
 
     <script src="app.js" defer></script>
 </body>

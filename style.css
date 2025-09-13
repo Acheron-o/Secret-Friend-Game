@@ -71,6 +71,9 @@ body {
 /* Theme button next to sound button */
 .theme-btn { left: 130px; }
 
+/* Help button next to language button */
+.help-btn { right: 130px; }
+
 /* ======================
    Input section
    ====================== */
@@ -135,7 +138,7 @@ button {
     font-size: 16px;
     border: 2px solid #000;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px #0000004d;
     cursor: pointer;
     background: var(--color-tertiary);
     color: var(--color-text);
@@ -211,7 +214,7 @@ ul {
 .language-modal {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.2);
+    background: #00000033;
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
@@ -225,7 +228,7 @@ ul {
     background: var(--color-secondary);
     padding: 32px 48px;
     border-radius: 32px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px #00000026;
     text-align: center;
     width: 90%;
     max-width: 400px;
@@ -256,7 +259,7 @@ ul {
     padding: 8px 12px;
     border-radius: 16px;
     background: var(--color-white);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px #00000014;
 }
 
 .language-option:hover {
@@ -291,4 +294,90 @@ ul {
     .header-btn img { width: 24px; height: 24px; }
     .language-option img { width: 40px; height: 40px; }
     .language-modal-content h2 { font-size: 24px; }
+}
+/* ======================
+   Instructions modal
+   ====================== */  
+   /* Instructions modal styles */
+#instructions-modal .language-modal-content {
+    position: relative;
+    background: var(--color-secondary);
+    padding: 40px 48px 32px 48px;
+    border-radius: 32px;
+    box-shadow: 0 8px 32px #00000026;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+#instructions-modal h2 {
+    font-family: "Merriweather", serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+}
+
+#instructions-modal #instructions-text p {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: var(--color-text);
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+#instructions-modal #close-instructions {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #00000026;
+}
+
+#instructions-modal #close-instructions:hover {
+    background-color: var(--color-button-hover);
+}
+
+#instructions-modal .lang-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-button); /* green */
+    border: none;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #00000026;
+    z-index: 10;
+}
+
+#instructions-modal .lang-btn img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(24%) saturate(1092%) hue-rotate(340deg) brightness(95%) contrast(90%);
+    /* This filter will approximate var(--color-primary) */
+}
+
+.language-modal#language-modal {
+    z-index: 2000;
+}
+.language-modal#instructions-modal {
+    z-index: 1000;
+}
+
+/* Responsive for instructions modal */
+@media (max-width: 480px) {
+    #instructions-modal .language-modal-content {
+        padding: 24px 12px 24px 12px;
+        max-width: 95vw;
+    }
+    #instructions-modal h2 {
+        font-size: 22px;
+    }
+    #instructions-modal #instructions-text p {
+        font-size: 16px;
+    }
 }

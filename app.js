@@ -2,7 +2,7 @@
 // 🎁 Secret Friend Game - Main Logic
 // ===================================
 
-// Array to store player names
+// Store player names
 let players = [];
 
 // Load audio files
@@ -11,25 +11,25 @@ const drawSound = new Audio('assets/sounds/Draw.mp3');
 const mainSound = new Audio('assets/sounds/main-theme.mp3');
 
 // --------------------------
-// Add a friend to the list
+// Add friend to list
 // --------------------------
 function addFriend() {
     const input = document.getElementById('friend');
     let name = input.value.trim();
 
-    // Validate empty input
+    // Check for empty input
     if (name === "") {
         displayMessage("h2", translations.invalid_name || "Please enter a valid name!");
         return;
     }
 
-    // Validate duplicate name
+    // Check for duplicate name
     if (validateName(name)) {
         displayMessage("h2", translations.duplicate_name || "Name already added. Please enter a different name.");
         return;
     }
 
-    // Play sound only if not muted
+    // Play sound if not muted
     generalSound.currentTime = 0;
     if (!isMuted) generalSound.play();
 
@@ -41,7 +41,7 @@ function addFriend() {
     document.getElementById("result").innerHTML = "";
 }
 
-// Update the friends list on the screen
+// Update friends list display
 function updateList() {
     const list = document.getElementById('friendsList');
     list.innerHTML = "";
@@ -67,11 +67,10 @@ function shuffle(array) {
 // Draw secret friend
 // --------------------------
 function drawFriend() {
-    // Require at least 2 friends
+    // Ensure minimum 2 players
     if (players.length < 2) {
         displayMessage("h2", translations.min_friends || "At least 2 friends are required to draw.");
         return;
-
     }
 
     // Play draw sound if not muted
@@ -81,14 +80,14 @@ function drawFriend() {
     let shuffled = shuffle([...players]);
     const secretFriend = shuffled[0];
 
-    // Show result
+    // Display result
     const result = document.getElementById('result');
     result.innerHTML = "";
     const li = document.createElement('li');
     li.textContent = secretFriend;
     result.appendChild(li);
 
-    // Clear players list
+    // Reset players list
     players = [];
     document.getElementById('friendsList').innerHTML = "";
 
@@ -97,10 +96,10 @@ function drawFriend() {
 }
 
 // --------------------------
-// Reset the game
+// Reset game state
 // --------------------------
 function resetGame() {
-    // Play sound only if there is something to reset
+    // Play sound if there's data to reset
     if (
         document.getElementById('friendsList').innerHTML !== "" ||
         document.getElementById('result').innerHTML !== ""
@@ -124,13 +123,13 @@ function validateName(name) {
 }
 
 // --------------------------
-// Add friend on Enter key
+// Handle Enter key for input
 // --------------------------
 document.getElementById('friend').addEventListener('keypress', e => {
     if (e.key === 'Enter') addFriend();
 });
 
-// Show message if name is duplicate while typing
+// Show duplicate name warning while typing
 document.getElementById('friend').addEventListener('input', function() {
     const name = this.value.trim();
     if (validateName(name)) {
@@ -141,7 +140,7 @@ document.getElementById('friend').addEventListener('input', function() {
 });
 
 // --------------------------
-// Mute/unmute sounds
+// Toggle mute for sounds
 // --------------------------
 const muteBtn = document.getElementById('mute-btn');
 const muteIcon = document.getElementById('mute-icon');
@@ -155,17 +154,15 @@ muteBtn.addEventListener('click', () => {
     muteIcon.alt = isMuted ? 'Muted' : 'Sound on';
 });
 
-//==================================
-// 🎵 Theme music toggle
-//==================================
+// --------------------------
+// Toggle theme music
+// --------------------------
 const themeBtn = document.getElementById('theme-btn');
 const themeIcon = document.getElementById('theme-icon');
 let isThemePlaying = false;
 
-// Loop the main theme
 mainSound.loop = true;
 
-// Toggle main theme on button click
 themeBtn.addEventListener('click', () => {
     if (isThemePlaying) {
         mainSound.pause();
@@ -173,16 +170,16 @@ themeBtn.addEventListener('click', () => {
         themeIcon.alt = 'Theme music off';
     } else {
         mainSound.currentTime = 0;
-        if (!isMuted) mainSound.play(); // Play only if not muted
+        if (!isMuted) mainSound.play();
         themeIcon.src = './assets/icons/music-theme-on.png';
         themeIcon.alt = 'Theme music on';
     }
     isThemePlaying = !isThemePlaying;
 });
 
-// ===================================
-// 🌍 Language modal logic
-// ===================================
+// --------------------------
+// Language selection
+// --------------------------
 const languages = [
     { code: 'en', name: 'English', flag: 'flag-en.png' },
     { code: 'pt', name: 'Português', flag: 'flag-pt.png' },
@@ -196,38 +193,20 @@ let translations = {};
 // Show language selection modal
 function showLanguageModal() {
     const modal = document.getElementById('language-modal');
-    let modalContent = modal.querySelector('.language-modal-content');
-    if (!modalContent) {
-        modalContent = document.createElement('div');
-        modalContent.className = 'language-modal-content';
-        modal.appendChild(modalContent);
-    }
+    let modalContent = modal.querySelector('.language-modal-content') || document.createElement('div');
+    modalContent.className = 'language-modal-content';
+    modal.appendChild(modalContent);
 
-    // Ensure the modal title exists and update it according to current language
-    let langModalTitle = modalContent.querySelector('h2');
-    if (!langModalTitle) {
-        langModalTitle = document.createElement('h2');
-        modalContent.prepend(langModalTitle);
-    }
-    if (translations["lang-model-title"]) {
-        langModalTitle.textContent = translations["lang-model-title"];
-    } else {
-        langModalTitle.textContent = "Choose your language";
-    }
+    // Set modal title
+    let langModalTitle = modalContent.querySelector('h2') || document.createElement('h2');
+    langModalTitle.textContent = translations["lang-model-title"] || "Choose your language";
+    modalContent.prepend(langModalTitle);
 
-    // Create or select language options container
-    let options = modalContent.querySelector('.language-options');
-    if (!options) {
-        options = document.createElement('div');
-        options.className = 'language-options';
-        modalContent.appendChild(options);
-    }
+    // Populate language options
+    let options = modalContent.querySelector('.language-options') || document.createElement('div');
+    options.className = 'language-options';
     options.innerHTML = '';
-
-    // Filter out the current language so its flag doesn't show
-    const langsToShow = languages.filter(l => l.code !== currentLang);
-
-    langsToShow.forEach(lang => {
+    languages.filter(l => l.code !== currentLang).forEach(lang => {
         const div = document.createElement('div');
         div.className = 'language-option';
         div.innerHTML = `
@@ -241,11 +220,12 @@ function showLanguageModal() {
         };
         options.appendChild(div);
     });
+    modalContent.appendChild(options);
 
     modal.classList.remove('hidden');
 }
 
-// Language button event
+// Load language button
 document.getElementById('lang-btn').addEventListener('click', showLanguageModal);
 
 // Load language JSON and apply translations
@@ -258,31 +238,65 @@ function loadLanguage(lang) {
         });
 }
 
-// Apply translations to UI elements
+// Apply translations to UI
 function applyTranslations() {
-    // Main UI translations
     document.querySelector('.main-title').textContent = translations.title;
     document.querySelector('.section-title').textContent = translations.enter_names;
     document.querySelector('.button-add').textContent = translations.add;
     document.querySelector('.button-draw span').textContent = translations.draw;
     document.querySelector('.button-reset span').textContent = translations.reset;
-    // Update modal title if exists
-    const langModalTitle = document.getElementById('language-modal-title');
-    if (langModalTitle && translations["lang-model-title"]) {
-        langModalTitle.textContent = translations["lang-model-title"];
-    }
-    // Update input placeholder
     const nameInput = document.getElementById('friend');
     if (nameInput && translations["type_name_placeholder"]) {
         nameInput.placeholder = translations["type_name_placeholder"];
     }
 }
 
-// Display messages using translation keys or fallback text
+// Display translated or fallback message
 function displayMessage(tag, keyOrText) {
     document.querySelector(tag).innerHTML = translations[keyOrText] || keyOrText;
 }
 
-// Initialize with English
+// Close language modal on outside click
+document.getElementById('language-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.add('hidden');
+    }
+});
+
+// --------------------------
+// Instructions modal logic
+// --------------------------
+window.addEventListener('DOMContentLoaded', () => {
+    // Show instructions on first visit
+    if (!localStorage.getItem('instructionsSeen')) {
+        document.getElementById('instructions-modal').classList.remove('hidden');
+    }
+});
+
+// Close instructions modal
+document.getElementById('close-instructions').addEventListener('click', () => {
+    document.getElementById('instructions-modal').classList.add('hidden');
+    localStorage.setItem('instructionsSeen', 'true');
+});
+
+// Close instructions on outside click
+document.getElementById('instructions-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.classList.add('hidden');
+        localStorage.setItem('instructionsSeen', 'true');
+    }
+});
+
+// Show instructions modal
+document.getElementById('help-btn').addEventListener('click', () => {
+    document.getElementById('instructions-modal').classList.remove('hidden');
+});
+
+// Show language modal from instructions
+document.getElementById('lang-btn-instructions').addEventListener('click', showLanguageModal);
+
+// --------------------------
+// Initialize default language
+// --------------------------
 loadLanguage('en');
 displayMessage("h2", "Enter your friends' names");
