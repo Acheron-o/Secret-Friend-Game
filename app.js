@@ -150,7 +150,7 @@ muteBtn.addEventListener('click', () => {
     isMuted = !isMuted;
     generalSound.muted = isMuted;
     drawSound.muted = isMuted;
-    muteIcon.src = isMuted ? './assets/icons/volume_off.png' : './assets/icons/speaker icon.png';
+    muteIcon.src = isMuted ? './assets/icons/speaker icon-off.png' : './assets/icons/speaker icon.png';
     muteIcon.alt = isMuted ? 'Muted' : 'Sound on';
 });
 
