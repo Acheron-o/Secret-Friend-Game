@@ -45,11 +45,11 @@ To better understand how the game works, watch this quick video or see the image
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Acheron-o/challenge-secret-friend-pt.git](https://github.com/Acheron-o/challenge-secret-friend-pt.git)
+    git clone [https://github.com/Acheron-o/challenge-secret-friend-pt.git](https://github.com/Acheron-o/Secret-Friend-Game.git)
     ```
 2.  **Enter the project folder:**
     ```bash
-    cd challenge-secret-friend-pt
+    cd Secret-Friend-Game
     ```
 3.  **Open the `index.html` file directly in your browser.**
     
