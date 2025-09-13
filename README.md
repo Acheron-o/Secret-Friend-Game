@@ -1,6 +1,6 @@
 # 🎁 Secret Friend Game
 
-![Project link 1]((https://challenge-secret-friend-pt.vercel.app/))
+[![Vercel](https://vercel.com/button)](https://challenge-secret-friend-pt.vercel.app/)
 ![GitHub Pages](https://github.com/badges/your_project_name/deploy.svg?style=flat&branch=main)
 
 The **Secret Friend Game** is a simple and fun web application for drawing secret friends quickly and fairly. The main goal is to strengthen skills in programming logic and DOM manipulation.
