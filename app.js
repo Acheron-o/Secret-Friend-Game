@@ -316,5 +316,5 @@ document.getElementById('lang-btn-instructions').addEventListener('click', showL
 // --------------------------
 // Initialize default language
 // --------------------------
-loadLanguage('pt');
-displayMessage("h2", "Digite o nome dos seus amigos");
+loadLanguage('en');
+displayMessage("h2", "Enter your friends' names");
