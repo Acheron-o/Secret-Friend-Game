@@ -1,68 +1,54 @@
-# 🎁 Secret Friend Game (Amigo Secreto)
+# 🎁 Secret Friend Game
 
-O principal objetivo deste desafio é **fortalecer as habilidades em lógica de programação**.  
-Aqui você deverá desenvolver a lógica para resolver o problema do sorteio do **Amigo Secreto**.
-
----
-
-## 🧩 Descrição do Projeto
-O usuário deve inserir nomes de amigos em uma lista através de um campo de texto.  
-Após adicionar os nomes, será possível sortear um **amigo secreto** de forma totalmente aleatória.
+The **Secret Friend Game** is a simple and fun web application for drawing secret friends quickly and fairly. The main goal is to strengthen skills in programming logic and DOM manipulation.
 
 ---
 
-## 🎯 Funcionalidades
-- ✅ **Adicionar nomes** à lista de amigos.  
-- ✅ **Visualizar lista** com todos os amigos adicionados.  
-- ✅ **Sortear aleatoriamente** um nome da lista.    
-- ✅ **Limpar a lista** automaticamente após o sorteio.  
+## 🚀 Technologies
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-- **HTML5** → estrutura da página.  
-- **CSS3** → estilização da interface.  
-- **JavaScript (DOM e lógica)** → manipulação da lista, validações e sorteio.  
+## 🌟 Features
+
+- **Add Names:** Insert your friends' names into a list.
+- **Fair Draw:** A secret friend is drawn completely at random.
+- **Automatic Cleanup:** The list is automatically cleared after the draw, ready for a new round.
+- **Language Support:** Change the interface language with a single click.
+- **Sound:** A button to enable or disable the application's sounds.
 
 ---
 
-## 🚀 Como Rodar Localmente
+## 🎬 Demo
 
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/Acheron-o/challenge-secret-friend-pt.git
-2.**Entre na pasta do projeto**:
-```` cd secret-friend-game ````
+To better understand how the game works, watch this quick video or see the images below:
 
-3.**Abra o arquivo index.html diretamente no navegador.**:
-**Clique duas vezes no arquivo
-ou
-Use a extensão Live Server no VS Code para rodar o projeto.**
+**(Here you can insert links to videos or GIFs)**
 
+![Image showing the game interface](https://via.placeholder.com/600x300.png?text=Game+Screenshot)
 
-## 🎲 Algoritmo Fisher–Yates (Breve Explicação)
+---
 
-O sorteio de nomes neste projeto utiliza o algoritmo Fisher–Yates shuffle.
-Esse algoritmo é usado para embaralhar arrays de forma justa, garantindo que cada elemento tenha a mesma probabilidade de aparecer em qualquer posição.
+## ⚙️ How to Run Locally
 
-Como funciona:
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/Acheron-o/challenge-secret-friend-pt.git](https://github.com/Acheron-o/challenge-secret-friend-pt.git)
+    ```
+2.  **Enter the project folder:**
+    ```bash
+    cd challenge-secret-friend-pt
+    ```
+3.  **Open the `index.html` file directly in your browser.**
+    
+    * **Option 1:** Double-click the file.
+    * **Option 2:** Use the **Live Server** extension in VS Code to run it.
 
-Começa pelo último elemento do array.
+---
 
-Sorteia um índice aleatório entre 0 e a posição atual.
+## 👨‍💻 Developed by
 
-Troca os elementos de posição.
-
-Repete o processo até o primeiro elemento.
-````
-function embaralhar(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // troca
-    }
-    return array;
-}
- ````
-
-
-
+* **[Your Name](https://github.com/Acheron-o)**
