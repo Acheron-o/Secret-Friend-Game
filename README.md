@@ -3,10 +3,21 @@
 ![Vercel](https://vercel.com/button)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
+![Main Screenshot do Secret Friend Game](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/assets/main-screenshot.png)
+
 The **Secret Friend Game** is a simple and fun web application for drawing secret friends quickly and fairly. The main goal is to strengthen skills in programming logic and DOM manipulation.
-<img src="./readme-images/main-gif,gif" alt="Main theme gif" width="100px" height="200px"
 
+---
+## 🚀 Live Demo
 
+![Demo GIF do sorteio](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/assets/sorteio.gif)
+
+Acess the application:
+
+* **Vercel:** [https://challenge-secret-friend-pt.vercel.app/](https://challenge-secret-friend-pt.vercel.app/)
+* **GitHub Pages:** [https://acheron-o.github.io/Secret-Friend-Game/](https://acheron-o.github.io/Secret-Friend-Game/)
+
+---
 
 ## 🚀 Technologies
 
@@ -18,6 +29,8 @@ The **Secret Friend Game** is a simple and fun web application for drawing secre
 
 ## 🌟 Features
 
+![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/assets/how-to-play-modal.png)
+
 - **Add Names:** Insert your friends' names into a list.
 - **Fair Draw:** A secret friend is drawn completely at random.
 - **Automatic Cleanup:** The list is automatically cleared after the draw, ready for a new round.
@@ -25,32 +38,3 @@ The **Secret Friend Game** is a simple and fun web application for drawing secre
 - **Sound:** A button to enable or disable the application's sounds.
 
 ---
-## 🚀 Live Demo
-
-Acess the application:
-
-* **Vercel:** [https://challenge-secret-friend-pt.vercel.app/](https://challenge-secret-friend-pt.vercel.app/)
-* **GitHub Pages:** [https://acheron-o.github.io/Secret-Friend-Game/](https://acheron-o.github.io/Secret-Friend-Game/)
-
----
-## ⚙️ How to Run Locally
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Acheron-o/Secret-Friend-Game.git
-    ```
-2.  **Enter the project folder:**
-    ```bash
-    cd Secret-Friend-Game
-    ```
-3.  **Open the `index.html` file directly in your browser.**
-    
-    * **Option 1:** Double-click the file.
-    * **Option 2:** Use the **Live Server** extension in VS Code to run it.
-
----
-
-## 👨‍💻 Developed by
-
-* **[Caio-](https://github.com/Acheron-o)**
- 
