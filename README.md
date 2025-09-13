@@ -29,7 +29,7 @@ Acess the application:
 
 ## 🌟 Features
 
-![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/assets/how-to-play-modal.png)
+![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/redme-images/guide-image.jpg)
 
 - **Add Names:** Insert your friends' names into a list.
 - **Fair Draw:** A secret friend is drawn completely at random.
