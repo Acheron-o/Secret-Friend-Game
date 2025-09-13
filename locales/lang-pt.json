@@ -9,5 +9,12 @@
   "duplicate_name": "Nome já adicionado. Por favor, insira um nome diferente.",
   "min_friends": "É necessário pelo menos 2 amigos para realizar o sorteio.",
   "lang-model-title": "Escolha seu idioma",
-  "type_name_placeholder": "Digite um nome"
+  "type_name_placeholder": "Digite um nome",
+  "instructions_title": "Como Jogar",
+  "instructions_welcome": "Bem-vindo ao Amigo Secreto!",
+  "instructions_step1": "Digite os nomes de todos os participantes.",
+  "instructions_step2": "Clique em 'Sortear' para selecionar um amigo secreto aleatoriamente.",
+  "instructions_step3": "Aproveite o jogo e divirta-se!",
+  "instructions_language": "Você pode mudar o idioma usando o botão acima.",
+  "instructions_ok": "OK"
 }

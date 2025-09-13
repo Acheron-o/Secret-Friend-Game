@@ -9,5 +9,12 @@
   "duplicate_name": "Nama sudah ditambahkan. Silakan masukkan nama yang berbeda.",
   "min_friends": "Minimal 2 teman diperlukan untuk undian.",
   "lang-model-title": "Pilih bahasa Anda",
-  "type_name_placeholder": "Ketik nama"
+  "type_name_placeholder": "Ketik nama",
+  "instructions_title": "Cara Bermain",
+  "instructions_welcome": "Selamat datang di Teman Rahasia!",
+  "instructions_step1": "Masukkan nama semua peserta.",
+  "instructions_step2": "Klik 'Undi Teman' untuk memilih teman rahasia secara acak.",
+  "instructions_step3": "Nikmati permainan dan bersenang-senang!",
+  "instructions_language": "Anda dapat mengubah bahasa menggunakan tombol di atas.",
+  "instructions_ok": "OK"
 }

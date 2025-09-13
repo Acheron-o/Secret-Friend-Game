@@ -9,5 +9,12 @@
   "duplicate_name": "名字已添加。请输入不同的名字。",
   "min_friends": "至少需要2位朋友才能抽取。",
   "lang-model-title": "选择你的语言",
-  "type_name_placeholder": "输入名字"
+  "type_name_placeholder": "输入名字",
+  "instructions_title": "如何玩",
+  "instructions_welcome": "欢迎体验神秘朋友！",
+  "instructions_step1": "输入所有参与者的名字。",
+  "instructions_step2": "点击“抽取朋友”随机选择一个神秘朋友。",
+  "instructions_step3": "享受游戏，玩得开心！",
+  "instructions_language": "您可以使用上面的按钮更改语言。",
+  "instructions_ok": "确定"
 }

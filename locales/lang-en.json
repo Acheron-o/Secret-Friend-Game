@@ -9,5 +9,12 @@
   "duplicate_name": "Name already added. Please enter a different name.",
   "min_friends": "At least 2 friends are required to draw.",
   "lang-model-title": "Choose your language",
-  "type_name_placeholder": "Type a name"
+  "type_name_placeholder": "Type a name",
+  "instructions_title": "How to Play",
+  "instructions_welcome": "Welcome to Secret Friend!",
+  "instructions_step1": "Enter the names of all participants.",
+  "instructions_step2": "Click 'Draw Friend' to randomly select a secret friend.",
+  "instructions_step3": "Enjoy the game and have fun!",
+  "instructions_language": "You can change the language using the button above.",
+  "instructions_ok": "OK"
 }
