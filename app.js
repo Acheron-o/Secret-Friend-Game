@@ -7,7 +7,7 @@ let players = [];
 
 // Load audio files
 const generalSound = new Audio('assets/sounds/general sound.mp3');
-const drawSound = new Audio('assets/sounds/draw.mp3');
+const drawSound = new Audio('assets/sounds/Draw.mp3');
 
 // --------------------------
 // Add a friend to the list
@@ -70,6 +70,7 @@ function drawFriend() {
     if (players.length < 2) {
         displayMessage("h2", translations.min_friends || "At least 2 friends are required to draw.");
         return;
+
     }
 
     // Play draw sound if not muted
