@@ -51,4 +51,5 @@ To better understand how the game works, watch this quick video or see the image
 
 ## 👨‍💻 Developed by
 
-* **[Your Name](https://github.com/Acheron-o)**
+* **[Caio-](https://github.com/Acheron-o)**
+ 
