@@ -1,0 +1,13 @@
+{
+  "title": "Secret Friend",
+  "enter_names": "Enter your friends' names",
+  "add": "Add",
+  "draw": "Draw Friend",
+  "reset": "Reset Game",
+  "success_draw": "Draw completed successfully!",
+  "invalid_name": "Please enter a valid name!",
+  "duplicate_name": "Name already added. Please enter a different name.",
+  "min_friends": "At least 2 friends are required to draw.",
+  "lang-model-title": "Choose your language",
+  "type_name_placeholder": "Type a name"
+}

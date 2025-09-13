@@ -1,0 +1,13 @@
+{
+  "title": "神秘朋友",
+  "enter_names": "输入你朋友的名字",
+  "add": "添加",
+  "draw": "抽取朋友",
+  "reset": "重置游戏",
+  "success_draw": "抽取成功！",
+  "invalid_name": "请输入有效的名字！",
+  "duplicate_name": "名字已添加。请输入不同的名字。",
+  "min_friends": "至少需要2位朋友才能抽取。",
+  "lang-model-title": "选择你的语言",
+  "type_name_placeholder": "输入名字"
+}

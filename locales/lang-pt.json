@@ -1,0 +1,13 @@
+{
+  "title": "Amigo Secreto",
+  "enter_names": "Digite o nome dos seus amigos",
+  "add": "Adicionar",
+  "draw": "Sortear",
+  "reset": "Resetar Jogo",
+  "success_draw": "Sorteio realizado com sucesso!",
+  "invalid_name": "Por favor, digite um nome válido!",
+  "duplicate_name": "Nome já adicionado. Por favor, insira um nome diferente.",
+  "min_friends": "É necessário pelo menos 2 amigos para realizar o sorteio.",
+  "lang-model-title": "Escolha seu idioma",
+  "type_name_placeholder": "Digite um nome"
+}

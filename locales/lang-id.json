@@ -1,0 +1,13 @@
+{
+  "title": "Teman Rahasia",
+  "enter_names": "Masukkan nama teman-teman Anda",
+  "add": "Tambah",
+  "draw": "Undi Teman",
+  "reset": "Reset Permainan",
+  "success_draw": "Pengundian berhasil!",
+  "invalid_name": "Silakan masukkan nama yang valid!",
+  "duplicate_name": "Nama sudah ditambahkan. Silakan masukkan nama yang berbeda.",
+  "min_friends": "Minimal 2 teman diperlukan untuk undian.",
+  "lang-model-title": "Pilih bahasa Anda",
+  "type_name_placeholder": "Ketik nama"
+}
