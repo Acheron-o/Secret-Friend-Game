@@ -28,12 +28,8 @@ Acess the application:
 ---
 
 ## 🌟 Features
-
+- **Complete guide:** A useful and easy guide.
 ![Modal How to Play](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/guide-image.png)
-
-- **Add Names:** Insert your friends' names into a list.
-- **Fair Draw:** A secret friend is drawn completely at random.
-- **Automatic Cleanup:** The list is automatically cleared after the draw, ready for a new round.
 - **Language Support:** Change the interface language with a single click.
 ![Translation feature](https://raw.githubusercontent.com/Acheron-o/Secret-Friend-Game/main/readme-images/translation-gif.gif)
 - **Sound:** A button to enable or disable the application's sounds.
