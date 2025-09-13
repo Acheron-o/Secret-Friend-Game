@@ -68,6 +68,9 @@ body {
 /* Language button right */
 .lang-btn { right: 20px; }
 
+/* Theme button next to sound button */
+.theme-btn { left: 130px; }
+
 /* ======================
    Input section
    ====================== */

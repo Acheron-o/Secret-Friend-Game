@@ -8,6 +8,7 @@ let players = [];
 // Load audio files
 const generalSound = new Audio('assets/sounds/general sound.mp3');
 const drawSound = new Audio('assets/sounds/Draw.mp3');
+const mainSound = new Audio('assets/sounds/main-theme.mp3');
 
 // --------------------------
 // Add a friend to the list
@@ -152,6 +153,31 @@ muteBtn.addEventListener('click', () => {
     drawSound.muted = isMuted;
     muteIcon.src = isMuted ? './assets/icons/speaker icon-off.png' : './assets/icons/speaker icon.png';
     muteIcon.alt = isMuted ? 'Muted' : 'Sound on';
+});
+
+//==================================
+// 🎵 Theme music toggle
+//==================================
+const themeBtn = document.getElementById('theme-btn');
+const themeIcon = document.getElementById('theme-icon');
+let isThemePlaying = false;
+
+// Loop the main theme
+mainSound.loop = true;
+
+// Toggle main theme on button click
+themeBtn.addEventListener('click', () => {
+    if (isThemePlaying) {
+        mainSound.pause();
+        themeIcon.src = './assets/icons/music-theme-off.png';
+        themeIcon.alt = 'Theme music off';
+    } else {
+        mainSound.currentTime = 0;
+        if (!isMuted) mainSound.play(); // Play only if not muted
+        themeIcon.src = './assets/icons/music-theme-on.png';
+        themeIcon.alt = 'Theme music on';
+    }
+    isThemePlaying = !isThemePlaying;
 });
 
 // ===================================
