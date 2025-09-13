@@ -279,3 +279,65 @@ ul {
     font-weight: 700;
     text-align: center;
 }
+/*===================== */
+/* Mobile Screens */
+/*===================== */ 
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    .section-title {
+        font-size: 20px;
+        text-align: center;
+    }
+    .header-banner {
+        flex-direction: column;
+        padding: 20px 0 0;
+    }
+    .header-banner img {
+        width: 90vw;
+        max-width: 300px;
+        height: auto;
+    }
+    .input-section {
+        border-radius: 32px 32px 0 0;
+        padding: 10px;
+    }
+    .input-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    .input-name, .button-add {
+        width: 100%;
+        border-radius: 25px;
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    .button-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    .button-draw, .button-reset {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+    ul {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .language-modal-content {
+        padding: 16px 8px;
+        max-width: 95vw;
+    }
+    .language-options {
+        gap: 12px;
+    }
+    .language-option img {
+        width: 36px;
+        height: 36px;
+    }
+}
