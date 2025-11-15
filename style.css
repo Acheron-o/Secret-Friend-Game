@@ -1,383 +1,306 @@
-/* ======================
-   Root variables
-   ====================== */
 :root {
-    --color-primary: #F5BB87;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #3f5d10;
-    --color-button-hover: #171816;
-    --color-text: #97A08D;
-    --color-white: #FFFFFF;
+    /* Paleta inspirada na imagem do Pensador: Neutros, verde musgo */
+    --color-bg: #F8F7F0; /* Bege muito claro, quase branco */
+    --color-card-bg: #FFFFFF;
+    --color-primary: #6B8E23; /* Verde Oliva/Musgo para o principal */
+    --color-primary-hover: #55721B;
+    --color-text: #36454F; /* Cinza Escuro (Charcoal Gray) */
+    --color-text-light: #708090; /* Cinza suave */
+    --color-accent: #8FBC8F; /* Verde suave para destaque/borda */
+    --color-border-light: #E0E0E0; /* Cinza claro para bordas */
+    --color-shadow: rgba(0, 0, 0, 0.08); /* Sombra mais sutil */
+    
+    --font-main: 'Poppins', sans-serif;
 }
 
-/* ======================
-   Global styles
-   ====================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-main);
 }
 
 body {
     min-height: 100vh;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg); /* Fundo bege suave */
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-/* ======================
-   Header banner
-   ====================== */
-.header-banner {
-    position: relative;
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
-}
-
-/* Header buttons (mute and language) */
-.header-btn {
-    position: absolute;
-    top: 20px;
-    background-color: #f5f5f5;
-    border: none;
-    cursor: pointer;
-}
-
-.header-btn img {
-    display: block;
-    width: 32px;
-    height: 32px;
-}
-
-/* Mute button left */
-.mute-btn { left: 20px; }
-
-/* Language button right */
-.lang-btn { right: 20px; }
-
-/* Theme button next to sound button */
-.theme-btn { left: 130px; }
-
-/* Help button next to language button */
-.help-btn { right: 130px; }
-
-/* ======================
-   Input section
-   ====================== */
-.input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 20px;
+    color: var(--color-text);
+}
+
+/* --- Card Principal --- */
+.card {
+    background: var(--color-card-bg);
     width: 100%;
+    max-width: 480px; /* Um pouco mais compacto */
+    border-radius: 16px; /* Bordas mais suaves */
+    padding: 35px;
+    box-shadow: 0 8px 25px var(--color-shadow); /* Sombra mais sutil e espalhada */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaçamento ajustado */
+    position: relative;
+    border: 1px solid var(--color-border-light); /* Borda fina para dar profundidade */
 }
 
-/* Titles */
-.main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+.card-header {
+    text-align: center;
+    position: relative; /* Para posicionamento do controle */
 }
 
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
+.controls {
+    position: absolute;
+    top: -10px; /* Ajuste para cima */
+    right: 0px; /* Ajuste para a direita */
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+    padding: 8px; /* Adiciona padding para área de clique */
+}
+
+.icon-btn:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.icon-btn img {
+    width: 22px; /* Ícones um pouco menores */
+    height: 22px;
+    /* Para ícones SVG monocromáticos, pode-se usar filter: */
+    filter: invert(30%) sepia(8%) saturate(1588%) hue-rotate(159deg) brightness(85%) contrast(85%); /* Tom de cinza-verde */
+}
+
+
+h1 {
     font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
+    color: var(--color-primary); /* Título em verde musgo */
+    font-size: 2.2rem; /* Um pouco maior */
+    margin-bottom: 5px;
+    letter-spacing: -0.5px; /* Ajuste para "peso" visual */
+}
+
+.image-container {
+    margin-top: 15px; /* Espaçamento maior acima da imagem */
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 80px; /* Imagem menor e mais discreta */
+    height: auto;
+    opacity: 0.8; /* Suavizar a imagem */
+}
+
+/* --- Inputs --- */
+.subtitle {
+    font-size: 1rem;
+    color: var(--color-text-light); /* Texto mais suave */
+    margin-bottom: 15px;
+    font-weight: 400; /* Mais leve */
     text-align: center;
 }
 
-/* Input wrapper */
 .input-wrapper {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+    gap: 12px; /* Espaçamento ajustado */
+    margin-bottom: 25px; /* Espaçamento maior */
 }
 
-.input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
-}
-
-/* Button container */
-.button-container {
-    width: 300px;
-    justify-content: center;
-    margin: 10px auto;
-}
-
-/* Button styles */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px #0000004d;
-    cursor: pointer;
-    background: var(--color-tertiary);
+input {
+    flex: 1;
+    padding: 12px 18px;
+    border: 1px solid var(--color-border-light); /* Borda mais fina */
+    border-radius: 10px; /* Bordas mais suaves */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
     color: var(--color-text);
+}
+
+input::placeholder {
+    color: var(--color-text-light);
+    opacity: 0.7;
+}
+
+input:focus {
+    border-color: var(--color-accent); /* Borda de foco em verde suave */
+    box-shadow: 0 0 0 3px rgba(143, 188, 143, 0.2); /* Sombra de foco suave */
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 4px 10px rgba(107, 142, 35, 0.2);
+}
+
+/* --- Listas --- */
+.lists-container {
+    min-height: 60px; /* Altura mínima para não "pular" */
+    margin-bottom: 10px;
+}
+
+.friends-list {
+    list-style: none;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.result-list {
+    list-style: none;
+    text-align: center;
+    color: var(--color-primary); /* Resultado em verde principal */
+    font-weight: 700;
+    font-size: 1.4rem; /* Um pouco maior para destaque */
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+/* --- Actions Footer --- */
+.actions {
     display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espaçamento entre botões */
+    margin-top: 15px; /* Espaçamento superior */
+}
+
+.btn-action, .btn-secondary {
+    width: 100%;
+    padding: 14px; /* Padding ligeiramente ajustado */
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
+    transition: 0.3s;
 }
 
-/* Add button */
-.button-add {
-    background-color: var(--color-tertiary);
+.btn-action {
+    background-color: var(--color-primary);
+    color: white;
+    box-shadow: 0 5px 15px rgba(107, 142, 35, 0.25); /* Sombra verde */
+}
+
+.btn-action:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(107, 142, 35, 0.35);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border-light);
+}
+
+.btn-secondary:hover:enabled {
+    background-color: var(--color-bg); /* Fundo sutil */
     color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    border-color: var(--color-accent);
 }
 
-.button-add:hover { background-color: #a1a1a1; }
-
-/* Lists */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
-    padding: 0;
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: var(--color-bg); /* Fundo sutil para disabled */
 }
 
-/* Result list */
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+/* Imagens dentro dos botões (ícones SVG) */
+.btn-action img {
+    filter: brightness(0) invert(1); /* Torna ícone branco */
+    width: 20px; /* Ícones menores */
+    height: 20px;
 }
 
-/* Draw button */
-.button-draw {
-    background-color: var(--color-button);
-    color: var(--color-white);
-    font-size: 16px;
-}
-
-.button-draw img { margin-right: 10px; }
-.button-draw:hover { background-color: var(--color-button-hover); }
-
-/* Reset button */
-.button-reset {
-    background-color: var(--color-button);
-    color: var(--color-white);
-    font-size: 16px;
-}
-
-.button-reset img { margin-right: 10px; }
-.button-reset:disabled { background-color: var(--color-tertiary); cursor: not-allowed; }
-.button-reset:disabled img { filter: grayscale(100%); }
-.button-reset:hover:enabled { background-color: var(--color-button-hover); }
-
-/* ======================
-   Responsiveness
-   ====================== */
-@media (max-width: 768px) {
-    .main-title { font-size: 36px; }
-    .section-title { font-size: 28px; }
-    .input-wrapper { flex-direction: column; align-items: center; }
-    .input-name, .button-add { width: 100%; border-radius: 25px; margin: 5px 0; }
-    .button-container { width: 100%; max-width: 300px; }
-}
-
-/* ======================
-   Language modal
-   ====================== */
-.language-modal {
+/* --- Modal --- */
+.modal {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: #00000033;
-    backdrop-filter: blur(8px);
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); /* Fundo modal mais suave */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
 }
 
-.language-modal.hidden { display: none; }
+.hidden { display: none; }
 
-.language-modal-content {
-    background: var(--color-secondary);
-    padding: 32px 48px;
-    border-radius: 32px;
-    box-shadow: 0 8px 32px #00000026;
-    text-align: center;
+.modal-content {
+    background: var(--color-card-bg);
+    padding: 30px;
+    border-radius: 16px;
     width: 90%;
-    max-width: 400px;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.language-modal-content h2 {
-    font-size: 28px;
-    color: var(--color-primary);
-    margin-bottom: 24px;
-    font-family: "Merriweather", serif;
-    font-weight: 700;
+.modal-content h3 {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .language-options {
     display: flex;
-    gap: 24px;
+    gap: 15px;
     justify-content: center;
-    margin-top: 24px;
+    margin: 25px 0;
     flex-wrap: wrap;
 }
 
-.language-option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.lang-option {
     cursor: pointer;
-    transition: transform 0.2s;
-    padding: 8px 12px;
-    border-radius: 16px;
-    background: var(--color-white);
-    box-shadow: 0 2px 8px #00000014;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: 1px solid transparent; /* Borda invisível */
+}
+.lang-option:hover { 
+    background: var(--color-bg); 
+    border-color: var(--color-accent);
+}
+.lang-option img { 
+    width: 45px; /* Bandeiras um pouco maiores */
+    height: 45px;
+    border-radius: 50%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.language-option:hover {
-    transform: scale(1.1);
-    background: var(--color-tertiary);
-}
-
-.language-option img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    margin-bottom: 8px;
-    border: 2px solid var(--color-primary);
-}
-
-.language-option span {
-    font-size: 16px;
+.btn-close {
+    background: var(--color-border-light); /* Cor de botão de fechar neutra */
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
-/*===================== */
-/* Mobile Screens */
-/*===================== */ 
-@media (max-width: 480px) {
-    .main-title { font-size: 28px; }
-    .section-title { font-size: 24px; }
-    .input-wrapper { flex-direction: column; align-items: center; }
-    .input-name, .button-add { width: 100%; border-radius: 25px; margin: 5px 0; }
-    .button-container { width: 100%; max-width: 300px; }
-    .header-btn img { width: 24px; height: 24px; }
-    .language-option img { width: 40px; height: 40px; }
-    .language-modal-content h2 { font-size: 24px; }
-}
-/* ======================
-   Instructions modal
-   ====================== */  
-   /* Instructions modal styles */
-#instructions-modal .language-modal-content {
-    position: relative;
-    background: var(--color-secondary);
-    padding: 40px 48px 32px 48px;
-    border-radius: 32px;
-    box-shadow: 0 8px 32px #00000026;
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-}
-
-#instructions-modal h2 {
-    font-family: "Merriweather", serif;
-    font-size: 28px;
-    font-weight: 900;
-    color: var(--color-primary);
-    margin-bottom: 18px;
-}
-
-#instructions-modal #instructions-text p {
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    color: var(--color-text);
-    margin-bottom: 18px;
-    line-height: 1.6;
-}
-
-#instructions-modal #close-instructions {
-    background-color: var(--color-button);
-    color: var(--color-white);
     border: none;
-    border-radius: 25px;
-    padding: 12px 32px;
-    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 8px #00000026;
+    font-weight: 500;
+    transition: 0.2s;
 }
-
-#instructions-modal #close-instructions:hover {
-    background-color: var(--color-button-hover);
-}
-
-#instructions-modal .lang-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: var(--color-button); /* green */
-    border: none;
-    border-radius: 50%;
-    padding: 6px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px #00000026;
-    z-index: 10;
-}
-
-#instructions-modal .lang-btn img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) saturate(100%) invert(72%) sepia(24%) saturate(1092%) hue-rotate(340deg) brightness(95%) contrast(90%);
-    /* This filter will approximate var(--color-primary) */
-}
-
-.language-modal#language-modal {
-    z-index: 2000;
-}
-.language-modal#instructions-modal {
-    z-index: 1000;
-}
-
-/* Responsive for instructions modal */
-@media (max-width: 480px) {
-    #instructions-modal .language-modal-content {
-        padding: 24px 12px 24px 12px;
-        max-width: 95vw;
-    }
-    #instructions-modal h2 {
-        font-size: 22px;
-    }
-    #instructions-modal #instructions-text p {
-        font-size: 16px;
-    }
+.btn-close:hover {
+    background: var(--color-text-light);
+    color: white;
 }
