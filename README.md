@@ -82,13 +82,6 @@ To run this project locally, follow these simple steps:
 
 ## 👨‍💻 Author
 
-<div align="center">
-  <a href="https://github.com/Acheron-o">
-    <img src="https://avatars.githubusercontent.com/u/108475409?v=4" width="100px;" alt="Caio Photo"/><br>
-    <sub><b>Caio</b></sub>
-  </a>
-</div>
-
 <br>
 
 Made by Caio.
