@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amigo Secreto Elegante</title>
+    <title>Amigo Secreto</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/favicon/favicon-32x32.png" type="image/x-icon">
@@ -18,13 +18,13 @@
         <header class="card-header">
             <div class="controls">
                 <button id="lang-btn" class="icon-btn" aria-label="Mudar Idioma">
-                    <img src="./assets/icons/language-icon-neutral.png" alt="Idioma">
+                    <img src="./assets/icons/idioma.png" alt="Mudar idioma">
                 </button>
             </div>
             
             <h1>Amigo Secreto</h1>
             <div class="image-container">
-                <img src="./assets/images/present-minimal.png" alt="Presente">
+                <img src="./assets/icons/presente.png" alt="Presente surpresa">
             </div>
         </header>
 
@@ -44,7 +44,7 @@
 
         <footer class="actions">
             <button class="btn-action" onclick="drawFriend()" id="btn-draw">
-                <img src="./assets/icons/draw-icon-neutral.png" alt="">
+                <img src="./assets/icons/sorteio.png" alt="Ícone sortear">
                 <span id="txt-draw">Sortear Amigo</span>
             </button>
             
@@ -59,6 +59,15 @@
             <h3 id="modal-title">Escolha o idioma</h3>
             <div class="language-options" id="lang-options"></div>
             <button class="btn-close" onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+
+    <div id="custom-alert" class="modal hidden">
+        <div class="modal-content alert-content">
+            <img id="alert-img" src="" alt="Alerta" class="alert-icon">
+            <h3 id="alert-title" class="alert-title">Atenção</h3>
+            <p id="alert-msg" class="alert-message"></p>
+            <button class="btn-primary btn-alert" onclick="closeAlert()">OK</button>
         </div>
     </div>
 
