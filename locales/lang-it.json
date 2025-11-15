@@ -1,0 +1,14 @@
+{
+  "title": "Amico Segreto",
+  "enter_names": "Inserisci i nomi dei tuoi amici",
+  "add": "Aggiungi",
+  "draw": "Estrarre",
+  "reset": "Nuovo Gioco",
+  "success_draw": "Estrazione completata!",
+  "invalid_name": "Inserisci un nome valido!",
+  "duplicate_name": "Nome già aggiunto.",
+  "min_friends": "Sono necessari almeno 2 amici.",
+  "lang-model-title": "Scegli la lingua",
+  "type_name_placeholder": "Scrivi un nome",
+  "attention": "Attenzione"
+}

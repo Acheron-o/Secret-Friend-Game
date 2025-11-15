@@ -1,0 +1,14 @@
+{
+  "title": "Wichteln",
+  "enter_names": "Namen der Freunde eingeben",
+  "add": "Hinzufügen",
+  "draw": "Auslosen",
+  "reset": "Neues Spiel",
+  "success_draw": "Auslosung erfolgreich!",
+  "invalid_name": "Bitte einen gültigen Namen eingeben!",
+  "duplicate_name": "Name bereits vorhanden.",
+  "min_friends": "Mindestens 2 Freunde sind erforderlich.",
+  "lang-model-title": "Sprache wählen",
+  "type_name_placeholder": "Name eingeben",
+  "attention": "Achtung"
+}

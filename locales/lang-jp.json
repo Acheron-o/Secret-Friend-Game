@@ -1,0 +1,14 @@
+{
+  "title": "シークレットフレンド",
+  "enter_names": "友達の名前を入力",
+  "add": "追加",
+  "draw": "抽選する",
+  "reset": "リセット",
+  "success_draw": "抽選完了！",
+  "invalid_name": "有効な名前を入力してください！",
+  "duplicate_name": "名前はすでに追加されています。",
+  "min_friends": "抽選には最低2人の友達が必要です。",
+  "lang-model-title": "言語を選択",
+  "type_name_placeholder": "名前を入力",
+  "attention": "注意"
+}

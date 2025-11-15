@@ -20,11 +20,11 @@ const alertModal = document.getElementById('custom-alert');
 const alertImg = document.getElementById('alert-img');
 const alertMsg = document.getElementById('alert-msg');
 
-// Map das imagens para cada tipo de erro (Certifique-se que os arquivos estão em assets/icons/)
+// Map das imagens para cada tipo de erro
 const alertImages = {
     invalid: 'assets/icons/valido.png',     // Gatinho do peixe
     duplicate: 'assets/icons/repetido.png', // Gatinho no copo
-    limit: 'assets/icons/limite.png'        // Gatinho azul (limite)
+    limit: 'assets/icons/limite.png'        // Gatinho azul
 };
 
 // ===================================
@@ -62,7 +62,6 @@ function updateUI() {
         elList.appendChild(li);
     });
     
-    // Habilita reset apenas se houver dados
     elResetBtn.disabled = players.length === 0 && elResult.innerHTML === "";
 }
 
@@ -79,8 +78,8 @@ function drawFriend() {
     const secretFriend = players[randomIndex];
 
     elResult.innerHTML = `<li>🎉 ${secretFriend} 🎉</li>`;
-    elList.innerHTML = ""; // Limpa lista visual para suspense
-    players = []; // Reseta array
+    elList.innerHTML = ""; 
+    players = []; 
     
     elResetBtn.disabled = false;
 }
@@ -98,19 +97,14 @@ function resetGame() {
 // ===================================
 
 function showCustomAlert(message, type) {
-    // Define a imagem correta baseada no tipo do erro
     alertImg.src = alertImages[type];
-    
-    // Define a mensagem traduzida
     alertMsg.textContent = message;
-    
-    // Mostra o modal
     alertModal.classList.remove('hidden');
 }
 
 function closeAlert() {
     alertModal.classList.add('hidden');
-    elInput.focus(); // Devolve o foco para o input
+    elInput.focus(); 
 }
 
 function playSound(type) {
@@ -120,7 +114,6 @@ function playSound(type) {
     } catch (e) { console.log("Audio not available"); }
 }
 
-// Enter para adicionar
 elInput.addEventListener('keypress', e => {
     if (e.key === 'Enter') addFriend();
 });
@@ -128,11 +121,17 @@ elInput.addEventListener('keypress', e => {
 // ===================================
 // 🌍 Internacionalização
 // ===================================
+
+// Lista completa de idiomas usando os SVGs
 const availableLangs = [
-    { code: 'pt', flag: 'flag-pt.png', name: 'Português' },
-    { code: 'en', flag: 'flag-en.png', name: 'English' },
-    { code: 'es', flag: 'flag-es.png', name: 'Español' },
-    { code: 'zh', flag: 'flag-zh.png', name: '中文' }
+    { code: 'pt', flag: 'br.svg', name: 'Português' },
+    { code: 'en', flag: 'us.svg', name: 'English' },
+    { code: 'es', flag: 'es.svg', name: 'Español' },
+    { code: 'fr', flag: 'fr.svg', name: 'Français' },
+    { code: 'it', flag: 'it.svg', name: 'Italiano' },
+    { code: 'de', flag: 'de.svg', name: 'Deutsch' },
+    { code: 'zh', flag: 'cn.svg', name: '中文' },
+    { code: 'jp', flag: 'jp.svg', name: '日本語' }
 ];
 
 async function loadLanguage(lang) {
@@ -143,6 +142,8 @@ async function loadLanguage(lang) {
         localStorage.setItem('secretFriendLang', lang);
     } catch (error) {
         console.error('Erro ao carregar idioma:', error);
+        // Fallback para português se falhar
+        if(lang !== 'pt') loadLanguage('pt');
     }
 }
 
@@ -159,21 +160,25 @@ function applyTranslations() {
     document.getElementById('friend').placeholder = getText('type_name_placeholder');
     document.getElementById('modal-title').textContent = getText('lang-model-title');
     
-    // Atualiza texto do modal de alerta se estiver visível
+    // Atualiza texto do alerta se estiver visível
     const alertTitle = document.querySelector('.alert-title');
-    if(alertTitle) alertTitle.textContent = translations['attention'] || "Atenção"; 
+    if(alertTitle) alertTitle.textContent = getText('attention'); 
 }
 
 // ===================================
-// ⚙️ Modal de Idioma
+// ⚙️ Modal de Idioma (Geração Dinâmica)
 // ===================================
 const langModal = document.getElementById('language-modal');
 const langOptionsContainer = document.getElementById('lang-options');
 
+// Limpa o container antes de adicionar para evitar duplicatas em recarregamentos
+langOptionsContainer.innerHTML = '';
+
 availableLangs.forEach(lang => {
     const div = document.createElement('div');
     div.className = 'lang-option';
-    div.innerHTML = `<img src="assets/flags/${lang.flag}" alt="${lang.name}">`;
+    // Título da bandeira ao passar o mouse (title attribute)
+    div.innerHTML = `<img src="assets/flags/${lang.flag}" alt="${lang.name}" title="${lang.name}">`;
     div.onclick = () => {
         loadLanguage(lang.code);
         closeModal();
@@ -189,7 +194,6 @@ function closeModal() {
     langModal.classList.add('hidden');
 }
 
-// Fechar modais clicando fora
 window.onclick = (event) => {
     if (event.target == langModal) closeModal();
     if (event.target == alertModal) closeAlert();

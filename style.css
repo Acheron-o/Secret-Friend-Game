@@ -42,8 +42,11 @@ body {
     position: relative;
 }
 
-/* TRUQUE: Remove o fundo branco das imagens JPG/PNG */
-.card img {
+/* TRUQUE: Remove o fundo branco das imagens JPG/PNG decorativas */
+/* NOTA: Isso NÃO se aplica às bandeiras dentro do modal, veja regra específica abaixo */
+.card > header img, 
+.card > footer img,
+.alert-content img {
     mix-blend-mode: multiply; 
     display: block;
 }
@@ -79,7 +82,7 @@ body {
 }
 
 .icon-btn img {
-    width: 42px; /* AUMENTADO */
+    width: 42px;
     height: 42px;
     object-fit: contain;
 }
@@ -224,11 +227,10 @@ input:focus {
     transform: translateY(-2px);
 }
 
-/* Ícone Sortear (Aumentado) */
+/* Ícone Sortear */
 .btn-action img {
-    width: 36px; /* AUMENTADO */
+    width: 36px;
     height: 36px;
-    mix-blend-mode: multiply; /* Remove o fundo branco */
 }
 
 .btn-secondary {
@@ -272,29 +274,42 @@ input:focus {
     border: 1px solid #F0F0F0;
 }
 
-/* --- Modal de Idioma --- */
+/* --- Modal de Idioma (Bandeiras SVG Estilizadas) --- */
 .language-options {
     display: flex;
-    gap: 12px;
+    gap: 20px; /* Espaçamento entre bandeiras */
     justify-content: center;
     margin: 25px 0;
     flex-wrap: wrap;
 }
 
+.lang-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
 .lang-option img { 
-    width: 36px; 
-    height: 36px;
-    border-radius: 50%; 
+    width: 50px; /* Tamanho considerável */
+    height: 50px;
+    border-radius: 50%; /* Torna o SVG retangular em um círculo perfeito */
+    object-fit: cover; /* Garante que a bandeira preencha o círculo sem distorcer */
     cursor: pointer;
-    transition: transform 0.2s;
-    border: 2px solid white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    mix-blend-mode: normal !important; /* IMPORTANTE: Bandeiras normais */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico suave */
+    
+    /* Estética */
+    border: 3px solid #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    
+    /* IMPORTANTE: Sobrescreve o mix-blend-mode global para bandeiras ficarem nítidas */
+    mix-blend-mode: normal !important; 
 }
 
 .lang-option img:hover {
-    transform: scale(1.15);
-    border-color: var(--color-accent);
+    transform: scale(1.2) rotate(5deg); /* Aumenta e gira levemente ao passar o mouse */
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 20px rgba(93, 112, 82, 0.3);
 }
 
 .btn-close {
@@ -321,7 +336,6 @@ input:focus {
     width: 100px;
     height: auto;
     margin-bottom: 15px;
-    mix-blend-mode: multiply; /* Remove fundo branco */
     display: block;
 }
 

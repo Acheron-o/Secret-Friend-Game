@@ -1,0 +1,14 @@
+{
+  "title": "Ami Secret",
+  "enter_names": "Entrez les noms de vos amis",
+  "add": "Ajouter",
+  "draw": "Tirer au sort",
+  "reset": "Nouveau Jeu",
+  "success_draw": "Tirage réussi !",
+  "invalid_name": "Veuillez entrer un nom valide !",
+  "duplicate_name": "Nom déjà ajouté. Essayez un autre nom.",
+  "min_friends": "Au moins 2 amis sont nécessaires.",
+  "lang-model-title": "Choisissez votre langue",
+  "type_name_placeholder": "Tapez un nom",
+  "attention": "Attention"
+}
